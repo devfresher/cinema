@@ -27,7 +27,7 @@ Route::group([
     Route::post('/login', 'LoginController@store')->middleware('guest')->name('dashboard-login');
 
     // logout routes
-    Route::post('logout', 'LogoutController@index')->middleware('auth')->name('logout');
+    Route::get('/logout', 'LogoutController@index')->middleware('auth')->name('logout');
 
 });
 
@@ -42,10 +42,9 @@ Route::group([
 
     // send message routes
     Route::group([
-        'prefix' => 'message',
+        'prefix' => 'cinemas',
     ], function(){
-        Route::get('/', 'MessageController@index')->name('message');
-        Route::post('/send', 'MessageController@store')->name('send-message');
+        Route::get('/', 'CinemaController@index')->name('cinemas');
     });
 
 });

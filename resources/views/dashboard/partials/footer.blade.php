@@ -1,7 +1,7 @@
 <!-- BEGIN:: Dashboard Footer Content Wrapper -->
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2021</span>
+            <span>Copyright &copy;</span>
         </div>
     </div>
 <!-- END::   Dashboard Footer Content Wrapper -->
@@ -19,7 +19,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form action="{{ route('logout') }}" method="POST">
+                    <form action="{{ route('logout') }}" method="GET">
                         @csrf
                         <input class="btn btn-primary" type="submit" value="Logout">
                     </form>
