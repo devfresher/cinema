@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/cinemas', 'App\Http\Controllers\API\CinemaController@index');
 Route::get('/cinema/{title}', 'App\Http\Controllers\API\CinemaController@show');
+
+Route::get('/movies', 'App\Http\Controllers\API\MovieController@index');
+Route::get('/movies/{title}', 'App\Http\Controllers\API\MovieController@show');
